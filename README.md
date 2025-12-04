@@ -1,16 +1,3 @@
-# cvsUtils
-
-**cvsUtils** is a collection of specialized utilities for processing Susceptibility Weighted Imaging (SWI) and other MRI sequences, developed for Central Vein Sign (CVS) research.
-
-## Features
-
-### Robust SWI Skull Stripping
-Standard skull stripping tools often fail on SWI images due to the high intensity of the superior scalp and dura. `cvsUtils` provides a robust, multi-stage solution:
-
-1.  **Initial Skull Stripping (External)**: Uses FSL BET (called via runner scripts) to remove the bulk of the skull.
-2.  **Gradient-Based Refinement**: Scans the superior region of the pre-stripped brain to detect and remove any remaining scalp/dura based on intensity gradients.
-3.  **Morphological Smoothing**: Applies enhanced morphological opening and closing to ensure a smooth, clean brain mask.
-
 ## Installation
 
 ```bash
